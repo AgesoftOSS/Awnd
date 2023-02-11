@@ -1,5 +1,5 @@
 /*
-	AwndTextBox.h
+	AwndTextBox.cpp
 	The header file that contains the TextBox Control.
 
 	(c) Agesoft 2021 -2 023

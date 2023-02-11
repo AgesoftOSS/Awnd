@@ -1,3 +1,10 @@
+/*
+	AwndLabel.h
+	The header file that contains the Label Control.
+
+	(c) Agesoft 2021 -2 023
+*/
+
 #pragma once
 #include <Windows.h>
 

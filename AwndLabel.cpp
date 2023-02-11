@@ -1,3 +1,10 @@
+/*
+	AwndLabel.cpp
+	The header file that contains the Label Control.
+
+	(c) Agesoft 2021 -2 023
+*/
+
 #include "AwndLabel.h"
 
 Awnd::Label::Label(int x, int y, int width, int height, LPCWSTR text, HWND hwnd, HMENU Id)
