@@ -3,6 +3,10 @@
 	The file that contains the code for the Application.
 
 	(c) Agesoft 2021 - 2023
+	
+	Authors:
+	Copy05 (https://github.com/Copy05)
+	ConstantesInt (https://github.com/ConstantesInt)
 */
 
 #include "Application.h"
@@ -23,44 +27,35 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	case WM_COMMAND:
 		Awnd::CommandHandler(wParam);
 		break;
-	case WM_PAINT:
-		// Unused for now.
-		break;
 	case WM_CLOSE:
 		DestroyWindow(hWnd);
 		break;
 	case WM_DESTROY:
-		PostQuitMessage(0);
-		return 0;
+		PostQuitMessage(0x00);
+		return 0x00;
 	}
 
 	return DefWindowProc(hWnd, uMsg, wParam, lParam);
 }
 
-// Das ist ein konstruktor dieser Construktor erstellt Die Fenster von dem Programm
-// Parametern sind Fensterbreite und höhe. Fenster Titel und ob es Vollbild sein soll oder nicht
 Application::Application(LPCWSTR windowsTitle, bool fullScreen, int rectwidth, int rectheight) : w_hInstance(GetModuleHandle(nullptr))
 {
-	// Dieser Variable gestalltet das fenster
 	DWORD style;
-	// Das ist das Fenster Titel
 	const wchar_t* windowTitle = windowsTitle;
 
-	// Hier wird das Fenster definiert und erstellt
 	WNDCLASS winClass = {};
 	winClass.lpszClassName = class_name;
 	winClass.hInstance = w_hInstance;
 	winClass.hIcon = LoadIcon(NULL, IDI_WINLOGO);
 	winClass.hCursor = LoadCursor(NULL, IDC_ARROW);
-	winClass.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1); // Hintergrund von den Fenster
-	winClass.lpfnWndProc = WindowProc; // Die Graphische oberfläche wird in WindowProc erstellt
+	winClass.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
+	winClass.lpfnWndProc = WindowProc;
 
 	RegisterClass(&winClass);
 
-	// Wenn fullscreen True ist dann erscheint das fenster in Vollbild.
 	if (fullScreen) {
-		rectwidth = GetSystemMetrics(SM_CXSCREEN); // Gibt den bildschirmbreite 
-		rectheight = GetSystemMetrics(SM_CYSCREEN); // Gibt den bildschirmhöhe
+		rectwidth = GetSystemMetrics(SM_CXSCREEN);
+		rectheight = GetSystemMetrics(SM_CYSCREEN);
 		style = WS_POPUP | WS_VISIBLE;
 	}
 
@@ -69,14 +64,14 @@ Application::Application(LPCWSTR windowsTitle, bool fullScreen, int rectwidth, i
 	}
 
 	RECT rect;
-	rect.left = 250;
-	rect.top = 250;
+	rect.left = 0xFA;
+	rect.top = 0xFA;
 	rect.right = rect.left + rectwidth;
 	rect.bottom = rect.top + rectheight;
 
 	AdjustWindowRect(&rect, style, false);
 
-	w_hwnd = CreateWindowEx(0, class_name, windowTitle, style, rect.left, rect.top, rect.right - rect.left, rect.bottom - rect.top, NULL, NULL, w_hInstance, NULL);
+	w_hwnd = CreateWindowEx(0x00, class_name, windowTitle, style, rect.left, rect.top, rect.right - rect.left, rect.bottom - rect.top, NULL, NULL, w_hInstance, NULL);
 
 	ShowWindow(w_hwnd, SW_SHOW);
 }
