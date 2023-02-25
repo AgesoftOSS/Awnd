@@ -35,6 +35,7 @@
 
 #pragma region Includes
 #pragma once
+
 // Awnd Includes
 #include "AwndLabel.h"
 #include "AwndButton.h"
@@ -64,7 +65,7 @@ namespace Awnd {
 	class Color {
 	public:
 		// constructors
-		Color() : r(0), g(0), b(0) {};
+		Color() : r(0x00), g(0x00), b(0x00) {};
 		Color(int red, int green, int blue) : r(red), g(green), b(blue) {};
 
 		// operators
@@ -148,8 +149,8 @@ namespace Awnd {
 class AwndApp
 {
 protected:
-	virtual void onApplicationCreate(float e_Time) { exit(0); };
-	virtual void onApplicationCreate() { exit(0); };
+	virtual void onApplicationCreate(float e_Time) { exit(0x00); };
+	virtual void onApplicationCreate() { exit(0x00); };
 
 	// Hides the Window
 	void HideConsole() { ShowWindow(GetConsoleWindow(), SW_HIDE); };
