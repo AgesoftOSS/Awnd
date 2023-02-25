@@ -48,7 +48,7 @@ Application::Application(LPCWSTR windowsTitle, bool fullScreen, int rectwidth, i
 	winClass.hInstance = w_hInstance;
 	winClass.hIcon = LoadIcon(NULL, IDI_WINLOGO);
 	winClass.hCursor = LoadCursor(NULL, IDC_ARROW);
-	winClass.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
+	winClass.hbrBackground = (HBRUSH)(COLOR_WINDOW + 0x01);
 	winClass.lpfnWndProc = WindowProc;
 
 	RegisterClass(&winClass);
