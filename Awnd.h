@@ -29,7 +29,8 @@
 
 	Author(s):
 	~~~~~~~~~~~~~~~~~~~~~~~~
-	Copy05
+	Copy05 (https://github.com/Copy05)
+	ConstantesInt (https://github.com/ConstantesInt)
 
 */
 
