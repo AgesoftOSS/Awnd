@@ -6,16 +6,19 @@ Awnd is a free & open source lightweight c++ framework for easily creating compo
 ***If you use Awnd please credit @Copy05 or @AgesoftOSS***
 
 # Features
-<h2>Command Handling</h2>
+**Command Handling**
 
-With Awnd you don't have to go to the `WindowProc` to handle the commands you need<br><br> 
-<h2>Creating Controls Easy</h2>
+With Awnd you don't have to go to the `WindowProc` to handle the commands you need<br><br>
 
-inside the `Awnd` namespace there are some control classes you can use to create the controls you need<br><br> 
-<h2>Object Orientated</h2>
+**Creating Controls Easy**
 
-since this is c++ Awnd is very object orientated when it's about controls.<br><br> 
-<h2>Helpful Utilities</h2>
+inside the `Awnd` namespace there are some control classes you can use to create the controls you need<br><br>
+
+**Object Orientated**
+
+since this is c++ Awnd is very object orientated when it's about controls.<br><br>
+
+**Helpful Utilities**
 
 Awnd has more than just Win32 specialized content. it has content for Console Development too.
 <br><br><br> 
